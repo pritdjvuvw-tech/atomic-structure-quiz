@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atomic Structure Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="quiz-header">
+            <div class="atom-icon">⚛</div>
+            <h1>Atomic Structure Quiz</h1>
+            <p>Moderate Level • 20 Questions • 20 Marks</p>
+        </header>
+
+
+        <!-- STUDENT DETAILS PAGE -->
+        <section id="student-section" class="card">
+
+            <h2>Student Information</h2>
+
+            <p class="instruction">
+                Please enter your details before starting the quiz.
+            </p>
+
+            <form id="student-form">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Gmail Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="department">Department</label>
+
+                    <select id="department" required>
+                        <option value="">Select Department</option>
+                        <option value="Computer Science and Engineering">
+                            Computer Science and Engineering
+                        </option>
+                        <option value="Information Technology">
+                            Information Technology
+                        </option>
+                        <option value="Electronics and Communication Engineering">
+                            Electronics and Communication Engineering
+                        </option>
+                        <option value="Electrical Engineering">
+                            Electrical Engineering
+                        </option>
+                        <option value="Mechanical Engineering">
+                            Mechanical Engineering
+                        </option>
+                        <option value="Civil Engineering">
+                            Civil Engineering
+                        </option>
+                        <option value="Chemical Engineering">
+                            Chemical Engineering
+                        </option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+
+                    <select id="semester" required>
+                        <option value="">Select Semester</option>
+                        <option value="1st Semester">1st Semester</option>
+                        <option value="2nd Semester">2nd Semester</option>
+                        <option value="3rd Semester">3rd Semester</option>
+                        <option value="4th Semester">4th Semester</option>
+                        <option value="5th Semester">5th Semester</option>
+                        <option value="6th Semester">6th Semester</option>
+                        <option value="7th Semester">7th Semester</option>
+                        <option value="8th Semester">8th Semester</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="10-digit mobile number"
+                        pattern="[0-9]{10}"
+                        maxlength="10"
+                        required
+                    >
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Start Quiz →
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- QUIZ SECTION -->
+        <section id="quiz-section" class="hidden">
+
+            <div class="quiz-top">
+
+                <div>
+                    <span id="question-counter">
+                        Question 1 of 20
+                    </span>
+                </div>
+
+                <div class="score-display">
+                    Score: <span id="current-score">0</span>
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+                <div id="progress-bar"></div>
+            </div>
+
+
+            <div id="question-container"></div>
+
+
+            <div class="navigation">
+
+                <button
+                    id="previous-btn"
+                    class="secondary-btn"
+                    disabled
+                >
+                    ← Previous
+                </button>
+
+                <button
+                    id="next-btn"
+                    class="primary-btn"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RESULT SECTION -->
+        <section id="result-section" class="card hidden">
+
+            <div class="result-icon">
+                🎉
+            </div>
+
+            <h2>Quiz Completed!</h2>
+
+            <div class="final-score">
+                <span id="final-score">0</span>
+                <small>/ 20</small>
+            </div>
+
+            <p id="result-message"></p>
+
+            <div class="student-summary">
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="result-name"></span>
+                </p>
+
+                <p>
+                    <strong>Gmail:</strong>
+                    <span id="result-email"></span>
+                </p>
+
+                <p>
+                    <strong>Department:</strong>
+                    <span id="result-department"></span>
+                </p>
+
+                <p>
+                    <strong>Semester:</strong>
+                    <span id="result-semester"></span>
+                </p>
+
+            </div>
+
+            <div id="submission-status">
+                Submitting your result...
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Atomic Structure Quiz</p>
+            <p>Powered by Google Apps Script & GitHub Pages</p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
